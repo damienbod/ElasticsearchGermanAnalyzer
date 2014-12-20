@@ -56,8 +56,7 @@ namespace ElasticsearchGermanAnalyzer
 	}
 }
 
-
-// second example from http://gibrown.com/
+		// second example from http://gibrown.com/
 
         //{
 		//  "filter": {
@@ -77,40 +76,39 @@ namespace ElasticsearchGermanAnalyzer
 		//  }
 		//}
 
-			//return new IndexDefinition
-			//{
-			//	IndexSettings =
-			//	{
-			//		Analysis = new Analysis
-			//		{
-			//			Filters= new AnalysisFilter
-			//			{
-			//				CustomFilters= new List<AnalysisFilterBase>
-			//				{
-			//					new StopTokenFilter("de_stop_filter")
-			//					{
-			//						StopwordsList = new List<string>{"_german_"}
-			//					}, 
-			//					new StemmerTokenFilter("de_stem_filter")
-			//					{
-			//						StemmerName = Stemmer.minimal_german
-			//					}
-			//				}
-			//			},
-			//			Analyzer =
-			//			{
-			//				Analyzers = new List<AnalyzerBase>
-			//				{
-			//					new CustomAnalyzer("custom_german_icu")
-			//					{
-			//						Tokenizer = "icu_tokenizer",
-			//						Filter= new List<string>{"icu_normalizer", "de_stop_filter", "de_stem_filter", DefaultTokenFilters.IcuFolding},
-			//					}
-								
-			//				}
-			//			}
-			//		},
-			//		NumberOfShards = 3,
-			//		NumberOfReplicas = 1
-			//	},
-			//};
+		//return new IndexDefinition
+		//{
+		//	IndexSettings =
+		//	{
+		//		Analysis = new Analysis
+		//		{
+		//			Filters= new AnalysisFilter
+		//			{
+		//				CustomFilters= new List<AnalysisFilterBase>
+		//				{
+		//					new StopTokenFilter("de_stop_filter")
+		//					{
+		//						StopwordsList = new List<string>{"_german_"}
+		//					}, 
+		//					new StemmerTokenFilter("de_stem_filter")
+		//					{
+		//						StemmerName = Stemmer.minimal_german
+		//					}
+		//				}
+		//			},
+		//			Analyzer =
+		//			{
+		//				Analyzers = new List<AnalyzerBase>
+		//				{
+		//					new CustomAnalyzer("custom_german_icu")
+		//					{
+		//						Tokenizer = "icu_tokenizer",
+		//						Filter= new List<string>{"icu_normalizer", "de_stop_filter", "de_stem_filter", DefaultTokenFilters.IcuFolding},
+		//					}							
+		//				}
+		//			}
+		//		},
+		//		NumberOfShards = 3,
+		//		NumberOfReplicas = 1
+		//	},
+		//};
