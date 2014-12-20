@@ -11,9 +11,6 @@ namespace ElasticsearchGermanAnalyzer
 		{
 			var elasticsearchGermanSearchProvider = new ElasticsearchGermanSearchProvider();
 
-			// Create the index defintion
-			//var indexDefinition = elasticsearchGermanSearchProvider.CreateNewIndexDefinitionForGermanSearch();
-
 			// create a new index and type mapping in elasticseach
 			elasticsearchGermanSearchProvider.CreateIndex( new IndexDefinition());
 			Console.ReadLine();

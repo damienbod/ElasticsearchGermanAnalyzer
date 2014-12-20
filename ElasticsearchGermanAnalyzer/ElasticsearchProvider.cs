@@ -15,7 +15,7 @@ namespace ElasticsearchGermanAnalyzer
 			};
 		}
 		private readonly IElasticsearchMappingResolver _elasticsearchMappingResolver = new ElasticsearchMappingResolver();
-		private const string ConnectionString = "http://localhost.fiddler:9200";
+		private const string ConnectionString = "http://localhost:9200";
 		private readonly ElasticsearchContext _context;
 
 		public void CreateIndex(IndexDefinition indexDefinition)
@@ -57,8 +57,9 @@ namespace ElasticsearchGermanAnalyzer
 }
 
 
+// second example from http://gibrown.com/
 
-//			{
+        //{
 		//  "filter": {
 		//	"de_stop_filter": {
 		//	  "type": "stop",
