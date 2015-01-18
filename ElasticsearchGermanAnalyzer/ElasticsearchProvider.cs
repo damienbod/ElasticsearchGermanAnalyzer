@@ -1,6 +1,8 @@
 ﻿using ElasticsearchCRUD;
 using ElasticsearchCRUD.ContextAddDeleteUpdate.IndexModel.SettingsModel;
 using ElasticsearchCRUD.ContextSearch.SearchModel;
+using ElasticsearchCRUD.Model.SearchModel;
+using ElasticsearchCRUD.Model.SearchModel.Queries;
 using ElasticsearchCRUD.Tracing;
 
 namespace ElasticsearchGermanAnalyzer
@@ -49,8 +51,11 @@ namespace ElasticsearchGermanAnalyzer
 		//}
 		public SearchResult<GermanData> Search(string name)
 		{
-			var query = "{ \"query\": { \"match\": {\"info\": \""+ name + "\"} }  }";
-			return _context.Search<GermanData>(query).PayloadResult;
+			var search = new Search()
+			{
+				Query = new Query(new MatchQuery("info", name))
+			};			
+			return _context.Search<GermanData>(search).PayloadResult;
 		}
 
 	}
